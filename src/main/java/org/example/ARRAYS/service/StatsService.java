@@ -4,17 +4,17 @@ import java.util.Arrays;
 
 public class StatsService {
 
-    public int amountOfSales(int[] sales) {
-        int amount = 0;                                    //сумма всех продаж
+    public long amountOfSales(long[] sales) {
+        long amount = 0;                                    //сумма всех продаж
         for (int i = 0; i < sales.length; i++) {
             amount = amount + sales[i];
         }
         return amount;
     }
 
-    public int averageSales(int[] sales) {
-        int average = 0;                                   //среднее число всех продаж
-        int amount = amountOfSales(sales);
+    public long averageSales(long[] sales) {
+        long average = 0;                                   //среднее число всех продаж
+        long amount = amountOfSales(sales);
         average = amount / sales.length;
         return average;
     }
@@ -43,9 +43,9 @@ public class StatsService {
         return maxMonth + 1;                               // месяца нумеруются с 1, а индексы массива с 0, нужно сдвинуть ответ на 1
     }
 
-    public int salesBelowAverage(int[] sales) {
+    public int salesBelowAverage(long[] sales) {
         int lowMonth = 0;                                  // количество месяцев со значением ниже среднего
-        int average = averageSales(sales);
+        long average = averageSales(sales);
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < average) {
@@ -56,9 +56,9 @@ public class StatsService {
         return lowMonth;
     }
 
-    public int salesAboveAverage(int[] sales) {
+    public int salesAboveAverage(long[] sales) {
         int aboveMonth = 0;                                  // количество месяцев со значением выше среднего
-        int average = averageSales(sales);
+        long average = averageSales(sales);
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > average) {

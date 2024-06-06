@@ -12,10 +12,10 @@ public class StatsServiceTest {
     public void shouldFindAmount() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedAmount = 180;
-        int actualAmount = service.amountOfSales(sales);
+        long expectedAmount = 180;
+        long actualAmount = service.amountOfSales(sales);
 
         Assertions.assertEquals(expectedAmount, actualAmount);
     }
@@ -24,10 +24,10 @@ public class StatsServiceTest {
     public void findAverageSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedAmount = 15;
-        int actualAmount = service.averageSales(sales);
+        long expectedAmount = 15;
+        long actualAmount = service.averageSales(sales);
 
         Assertions.assertEquals(expectedAmount, actualAmount);
     }
@@ -60,10 +60,10 @@ public class StatsServiceTest {
     public void findSalesBelowAverage() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedAmount = 5;
-        int actualAmount = service.salesBelowAverage(sales);
+        long actualAmount = service.salesBelowAverage(sales);
 
         Assertions.assertEquals(expectedAmount, actualAmount);
     }
@@ -72,10 +72,10 @@ public class StatsServiceTest {
     public void findSalesAboveAverage() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedAmount = 5;
-        int actualAmount = service.salesAboveAverage(sales);
+        long actualAmount = service.salesAboveAverage(sales);
 
         Assertions.assertEquals(expectedAmount, actualAmount);
     }
